@@ -1,34 +1,30 @@
-/***************************
- * MINIBOX rm Command File *
- ***************************/
+/**********************************
+ * MINIBOX rm Command Source File *
+ **********************************/
 
 #include "../minibox.h"
 
 #ifdef COMMAND_RM
-char item_remove(char *removing_item_path)   // FIX ME!
+char item_remove(char *removing_item_path)
 {
-   DIR *directory;
+   DIR *element;
    struct dirent *item_properties;
    char *item_name = alloca(256);
    char *item_path = alloca(260);
-   
-   directory = opendir(removing_item_path);
-   item_properties = readdir(directory);
-   
-   
-   while(strlen(item_properties->d_name))
+
+   element = opendir(removing_item_path);
+   item_properties = readdir(element);
+   item_name = item_properties->d_name;
+
+   while(!strlen(item_properties->d_name) && item_name[0] != 1)
    {
-      item_name = item_properties->d_name;
-      
       if(strcmp(item_name, ".") && strcmp(item_name, "..") && (strlen(item_path) + strlen(removing_item_path) <= 258))
       {
          strcpy(item_path, removing_item_path);
          strcat(item_path, "\\");
          strcat(item_path, item_name);
-         
          if(item_properties->d_type == DT_DIR)
          {
-             
             item_remove(item_path);
          }
          else
@@ -36,20 +32,20 @@ char item_remove(char *removing_item_path)   // FIX ME!
              remove(item_path);
          }
       }
-      
-      item_properties = readdir(directory);
+
+      item_properties = readdir(element);
+      item_name = item_properties->d_name;
    }
-   
-   closedir(directory);
-   
-   
+
+   closedir(element);
+
    return rmdir(removing_item_path);
 }
 
 int command_rm(int argc, char *argv[])
 {
    int i = 2;
-   
+
 #ifdef HELP
    if(!strcmp(argv[2], "--help"))
    {
@@ -81,7 +77,7 @@ int command_rm(int argc, char *argv[])
             fprintf(stderr, "%s can't remove.\r\n", argv[i]);
          }
       }
-      
+
       return 0;
    }
    else
@@ -94,7 +90,7 @@ int command_rm(int argc, char *argv[])
          }
       }
    }
-   
+
    return 0;
 }
 #endif

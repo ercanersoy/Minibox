@@ -35,7 +35,7 @@ int command_ls(int argc, char *argv[])
       {
          puts("MINIBOX ls - List directory contents.");
          puts("  MINIBOX ls [options] [file]");
-         puts("  MINIBOX echo --help|--version\r\n");
+         puts("  MINIBOX ls --help|--version\r\n");
          puts("Options:");
          puts("-1  Display output as one column.");
          puts("-a  Don't ignore \".\" and \"..\".");

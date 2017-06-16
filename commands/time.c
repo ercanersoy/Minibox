@@ -51,7 +51,7 @@ int command_time(int argc, char *argv[])
       gettimeofday(&end, NULL);
       measured_time = (long double)(((end.tv_sec - start.tv_sec) * 1000000 + end.tv_usec) - start.tv_usec) / 1000000;
 
-      printf("%llf", measured_time);
+      printf("%.6llf", measured_time);
    }
 }
 #endif

@@ -50,7 +50,7 @@ int command_cat(int argc, char *argv[])
    file_resource = fopen(argv[2], "r");
 
    read_buffer = fgetc(file_resource);
-   while(read_buffer > -1)
+   while(read_buffer != -1)
    {
       if(show_ends && read_buffer == '\n')
       {
