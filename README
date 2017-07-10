@@ -1,6 +1,6 @@
-Minibox 0.1
+Minibox 0.2
 
-Linux commands in DOS.
+Small Linux commands for resource limited systems.
 
 Copyright (C) 2017 Ercan Ersoy
 This program is free software (GNU General Public License)
@@ -12,9 +12,9 @@ Usage:
 
 Compile:
 
-  The program must be compiled with DJGPP and
-  optionally should compressed with UPX. Compreesing
-  with UPX is default.
+  The program must be compiled with GCC.
+
+  For compiling in DOS: make dos
   
 Commands:
 
@@ -25,6 +25,7 @@ Commands:
   cp
   date
   echo
+  help
   ls
   mkdir
   mv

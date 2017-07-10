@@ -7,7 +7,7 @@ all: minibox*
 
 dos: minibox.exe
 
-minibox.exe: main.o commands/beep.o commands/cat.o commands/cd.o commands/clear.o commands/cp.o commands/date.o commands/echo.o commands/ls.o commands/mkdir.o commands/mv.o commands/pwd.o commands/rm.o commands/rmdir.o commands/sh.o commands/time.o
+minibox.exe: main.o commands/beep.o commands/cat.o commands/cd.o commands/clear.o commands/cp.o commands/date.o commands/echo.o commands/help.o commands/ls.o commands/mkdir.o commands/mv.o commands/pwd.o commands/rm.o commands/rmdir.o commands/sh.o commands/time.o
 	$(LD) $(LDFLAGS) $? -o $@
 
 main.o: main.c
@@ -32,6 +32,9 @@ commands/date.o: commands/date.c
 	$(CC) $(CFLAGS) $? -o $@
 
 commands/echo.o: commands/echo.c
+	$(CC) $(CFLAGS) $? -o $@
+
+commands/help.o: commands/help.c
 	$(CC) $(CFLAGS) $? -o $@
 
 commands/ls.o: commands/ls.c

@@ -47,6 +47,12 @@ int command_date(int argc, char *argv[]);
 int command_echo(int argc, char *argv[]);
 #endif
 
+#if HELP
+#ifdef COMMAND_HELP
+int command_help(int argc, char *argv[]);
+#endif
+#endif
+
 #ifdef COMMAND_LS
 int command_ls(int argc, char *argv[]);
 #endif

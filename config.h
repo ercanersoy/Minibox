@@ -11,6 +11,7 @@
 #define COMMAND_CP 1
 #define COMMAND_DATE 1
 #define COMMAND_ECHO 1
+#define COMMAND_HELP 1
 #define COMMAND_LS 1
 #define COMMAND_MKDIR 1
 #define COMMAND_MV 1
