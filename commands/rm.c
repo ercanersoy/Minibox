@@ -4,7 +4,7 @@
 
 #include "../minibox.h"
 
-#ifdef COMMAND_RM
+#if COMMAND_RM
 char item_remove(char *removing_item_path)
 {
    DIR *element;
@@ -46,7 +46,7 @@ int command_rm(int argc, char *argv[])
 {
    int i = 2;
 
-#ifdef HELP
+#if HELP
    if(!strcmp(argv[2], "--help"))
    {
       puts("MINIBOX rm - Removes files.");
@@ -58,7 +58,7 @@ int command_rm(int argc, char *argv[])
    }
 #endif
 
-#ifdef VERSION
+#if VERSION
    if(!strcmp(argv[2], "--version"))
    {
       version();

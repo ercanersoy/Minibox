@@ -4,10 +4,10 @@
 
 #include "../minibox.h"
 
-#ifdef COMMAND_CP
+#if COMMAND_CP
 int command_cp(int argc, char *argv[])
 {
-#ifdef HELP
+#if HELP
    if(argc == 3 && !strcmp(argv[2], "--help"))
    {
       puts("MINIBOX cp - Copy specified file or directory to specified directory.");
@@ -17,7 +17,7 @@ int command_cp(int argc, char *argv[])
    }
 #endif
 
-#ifdef VERSION
+#if VERSION
    if(argc == 3 && !strcmp(argv[2], "--version"))
    {
       version();

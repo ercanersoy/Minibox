@@ -9,7 +9,7 @@ int command_mkdir(int argc, char *argv[])
 {
    int i = 2;
 
-#ifdef HELP
+#if HELP
    if(!strcmp(argv[2], "--help"))
    {
       puts("MINIBOX mkdir - Creates specified directories.");
@@ -19,7 +19,7 @@ int command_mkdir(int argc, char *argv[])
    }
 #endif
 
-#ifdef VERSION
+#if VERSION
    if(!strcmp(argv[2], "--version"))
    {
       version();

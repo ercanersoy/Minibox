@@ -4,7 +4,7 @@
 
 #include "../minibox.h"
 
-#ifdef COMMAND_CAT
+#if COMMAND_CAT
 int command_cat(int argc, char *argv[])
 {
    int i = 2;
@@ -13,7 +13,7 @@ int command_cat(int argc, char *argv[])
    unsigned char show_ends = 0;
    unsigned char show_tabs = 0; 
 
-#ifdef HELP
+#if HELP
       if(!strcmp(argv[2], "--help"))
       {
          puts("MINIBOX cat - Output specified file's contents.");
@@ -26,7 +26,7 @@ int command_cat(int argc, char *argv[])
       }
 #endif
 
-#ifdef VERSION
+#if VERSION
       if(!strcmp(argv[2], "--version"))
       {
          version();

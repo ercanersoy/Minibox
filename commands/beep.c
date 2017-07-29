@@ -4,14 +4,14 @@
 
 #include "../minibox.h"
 
-#ifdef COMMAND_BEEP
+#if COMMAND_BEEP
 int command_beep(int argc, char *argv[])
 {
    int i = 2;
    int frequency = 750;
    int length = 1000;
 
-#ifdef HELP
+#if HELP
       if(!strcmp(argv[2], "--help"))
       {
          puts("MINIBOX beep - Output sound from PC speaker.");
@@ -24,7 +24,7 @@ int command_beep(int argc, char *argv[])
       }
 #endif
 
-#ifdef VERSION
+#if VERSION
       if(!strcmp(argv[2], "--version"))
       {
          version();

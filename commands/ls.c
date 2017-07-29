@@ -6,7 +6,7 @@
 
 #define MAX_PATH_LENGTH 260
 
-#ifdef COMMAND_LS
+#if COMMAND_LS
 void path_current_directory(char *path)
 {
    getcwd(path, MAX_PATH_LENGTH);
@@ -30,7 +30,7 @@ int command_ls(int argc, char *argv[])
 
    if(argc > 2)
    {
-#ifdef HELP
+#if HELP
       if(!strcmp(argv[2], "--help"))
       {
          puts("MINIBOX ls - List directory contents.");
@@ -44,7 +44,7 @@ int command_ls(int argc, char *argv[])
       }
 #endif
 
-#ifdef VERSION
+#if VERSION
       if(!strcmp(argv[2], "--version"))
       {
          version();

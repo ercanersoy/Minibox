@@ -4,7 +4,7 @@
 
 #include "../minibox.h"
 
-#ifdef COMMAND_CD
+#if COMMAND_CD
 int command_cd(int argc, char *argv[])
 {
    if(argc == 3)

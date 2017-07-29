@@ -4,7 +4,7 @@
 
 #include "../minibox.h"
 
-#ifdef COMMAND_ECHO
+#if COMMAND_ECHO
 int command_echo(int argc, char *argv[])
 {
    char backslash_escapes = 0;
@@ -14,7 +14,7 @@ int command_echo(int argc, char *argv[])
    int j = 0;
    char character;
 
-#ifdef HELP
+#if HELP
    if(!strcmp(argv[2], "--help"))
    {
       puts("MINIBOX echo - Prints specified messages.");
@@ -28,7 +28,7 @@ int command_echo(int argc, char *argv[])
    }
 #endif
 
-#ifdef VERSION
+#if VERSION
    if(!strcmp(argv[2], "--version"))
    {
       version();

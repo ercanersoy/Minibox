@@ -4,10 +4,10 @@
 
 #include "../minibox.h"
 
-#ifdef COMMAND_CLEAR
+#if COMMAND_CLEAR
 int command_clear(int argc, char *argv[])
 {
-#ifdef HELP
+#if HELP
       if(!strcmp(argv[2], "--help"))
       {
          puts("MINIBOX clear - Output sound from PC speaker.");
@@ -17,7 +17,7 @@ int command_clear(int argc, char *argv[])
       }
 #endif
 
-#ifdef VERSION
+#if VERSION
       if(!strcmp(argv[2], "--version"))
       {
          version();

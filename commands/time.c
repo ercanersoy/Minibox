@@ -4,18 +4,16 @@
 
 #include "../minibox.h"
 
-#define MAX_COMMAND_LINE_LENGTH 1024
-
-#ifdef COMMAND_TIME
+#if COMMAND_TIME
 int command_time(int argc, char *argv[])
 {
    int i = 0;
-   char *command_line = alloca(MAX_COMMAND_LINE_LENGTH);
+   char *command_line;
    struct timeval start;
    struct timeval end;
    long double measured_time = 0.0;
 
-#ifdef HELP
+#if HELP
    if(argc == 3 && !strcmp(argv[2], "--help"))
    {
       puts("MINIBOX time - Measure specified command's execution time as second.");
@@ -25,7 +23,7 @@ int command_time(int argc, char *argv[])
    }
 #endif
 
-#ifdef VERSION
+#if VERSION
    if(argc == 3 && !strcmp(argv[2], "--version"))
    {
       version();
@@ -35,6 +33,8 @@ int command_time(int argc, char *argv[])
 
    if(argc > 2)
    {
+      command_line = malloc(MAX_COMMAND_LINE_LENGTH);
+
       strcpy(command_line, argv[2]);
 
       if(argc > 3)
@@ -51,7 +51,9 @@ int command_time(int argc, char *argv[])
       gettimeofday(&end, NULL);
       measured_time = (long double)(((end.tv_sec - start.tv_sec) * 1000000 + end.tv_usec) - start.tv_usec) / 1000000;
 
-      printf("%.6llf", measured_time);
+      printf("%.6Lf", measured_time);
+      
+      free(command_line);
    }
 }
 #endif

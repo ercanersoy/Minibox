@@ -4,14 +4,12 @@
 
 #include "../minibox.h"
 
-#define MAX_PATH_LENGTH 260
-
-#ifdef COMMAND_PWD
+#if COMMAND_PWD
 int command_pwd(int argc, char *argv[])
 {
-   char *buffer = (char *)malloc(MAX_PATH_LENGTH);
-   
-#ifdef HELP
+   char *buffer;
+
+#if HELP
    if(!strcmp(argv[2], "--help"))
    {
       puts("MINIBOX pwd - Creates directory.");
@@ -21,7 +19,7 @@ int command_pwd(int argc, char *argv[])
    }
 #endif
 
-#ifdef VERSION
+#if VERSION
    else if(!strcmp(argv[2], "--version"))
    {
       version();
@@ -31,10 +29,10 @@ int command_pwd(int argc, char *argv[])
 
    else
    {
+      buffer = (char *)malloc(MAX_PATH_LENGTH);
       puts(getcwd(buffer, MAX_PATH_LENGTH));
+      free(buffer);
    }
-
-   free(buffer);
 
    return 0;
 }

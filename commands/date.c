@@ -4,9 +4,7 @@
 
 #include "../minibox.h"
 
-#define DATE_AND_TIME_STRING_MAX 80
-
-#ifdef COMMAND_DATE
+#if COMMAND_DATE
 int command_date(int argc, char *argv[])
 {
    time_t datetime_time_t;
@@ -15,7 +13,7 @@ int command_date(int argc, char *argv[])
    struct time set_time;
    char formatted_string[DATE_AND_TIME_STRING_MAX];
 
-#ifdef HELP
+#if HELP
    if(!strcmp(argv[2], "--help"))
    {
       puts("MINIBOX date - Print or set system date and time.");
@@ -28,7 +26,7 @@ int command_date(int argc, char *argv[])
    }
 #endif
 
-#ifdef VERSION
+#if VERSION
    if(!strcmp(argv[2], "--version"))
    {
       version();
@@ -43,7 +41,7 @@ int command_date(int argc, char *argv[])
       puts(ctime(&datetime_time_t));
 	  return 0;
    }
-   else if(argc >= 3)
+   else
    {
       if(!strcmp(argv[2], "-s"))
       {

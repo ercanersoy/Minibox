@@ -4,14 +4,12 @@
 
 #include "../minibox.h"
 
-#define MAX_COMMAND_LINE_LENGTH 1024
-
-#ifdef COMMAND_SH
+#if COMMAND_SH
 int command_sh(int argc, char *argv[])
 {
-   char *command_line = alloca(MAX_COMMAND_LINE_LENGTH);
+   char *command_line;
    
-#ifdef HELP
+#if HELP
    if(!strcmp(argv[2], "--help"))
    {
       puts("MINIBOX sh - Minibox shell");
@@ -23,7 +21,7 @@ int command_sh(int argc, char *argv[])
    }
 #endif
 
-#ifdef VERSION
+#if VERSION
    else if(!strcmp(argv[2], "--version"))
    {
       version();
@@ -31,20 +29,25 @@ int command_sh(int argc, char *argv[])
    }
 #endif
 
+   command_line = (char *) malloc(MAX_COMMAND_LINE_LENGTH);
+
    loop:
-   printf("\r\n%s", "#");
-   gets(command_line);
+
+   printf("\r\n#");
+   fgets(command_line, MAX_COMMAND_LINE_LENGTH, stdin);
    
-   if(strcmp(command_line, "exit") && strcmp(command_line, ""))
-   {
-      system(command_line);
-   }
-   else if(!strcmp(command_line, "exit"))
+   if(!strcmp(command_line, "exit\n"))
    {
       exit(0);
    }
+   else if(strcmp(command_line, "\n"))
+   {
+      system(command_line);
+   }
 
    goto loop;
+
+   free(command_line);
 
    return 0;
 }

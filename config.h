@@ -25,3 +25,7 @@
 
 #define HELP 1
 #define VERSION 1
+
+#define DATE_AND_TIME_STRING_MAX 80
+#define MAX_PATH_LENGTH 260
+#define MAX_COMMAND_LINE_LENGTH 127

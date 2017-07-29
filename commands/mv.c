@@ -4,10 +4,10 @@
 
 #include "../minibox.h"
 
-#ifdef COMMAND_MV
+#if COMMAND_MV
 int command_mv(int argc, char *argv[])
 {
-#ifdef HELP
+#if HELP
    if(argc == 3 && !strcmp(argv[2], "--help"))
    {
       puts("MINIBOX mv - Move and/or rename specified");
@@ -18,7 +18,7 @@ int command_mv(int argc, char *argv[])
    }
 #endif
 
-#ifdef VERSION
+#if VERSION
    if(argc == 3 && !strcmp(argv[2], "--version"))
    {
       version();
