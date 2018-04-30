@@ -16,8 +16,8 @@ int command_time(int argc, char *argv[])
 #if HELP
    if(argc == 3 && !strcmp(argv[2], "--help"))
    {
-      puts("MINIBOX time - Measure specified command's execution time as second.");
-      puts("  MINIBOX time command [argument]");
+      puts(MINIBOX_TIME_MEASURE_SPECIFIED_COMMAND_S_EXECUTION_TIME_AS_SECOND);
+      puts(MINIBOX_TIME_COMMAND_ARGUMENT);
       puts("  MINIBOX time --help|--version");
       return 0;
    }

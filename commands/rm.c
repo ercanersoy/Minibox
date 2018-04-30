@@ -49,11 +49,11 @@ int command_rm(int argc, char *argv[])
 #if HELP
    if(!strcmp(argv[2], "--help"))
    {
-      puts("MINIBOX rm - Removes files.");
-      puts("  MINIBOX rm [-r] items");
+      puts(MINIBOX_RM_REMOVE_SPECIFIED_FILES);
+      puts(MINIBOX_RM_R_ITEMS);
       puts("  MINIBOX rm --help|--version\r\n");
-      puts("Option:");
-      puts("-r  Remove specified directories and their contents recusively.");
+      puts(OPTION);
+      puts(R_REMOVE_SPECIFIED_DIRECTORIES_AND_THEIR_CONTENTS_RECURSIVELY);
       return 0;
    }
 #endif
@@ -74,7 +74,7 @@ int command_rm(int argc, char *argv[])
       {
          if(item_remove(argv[i]))
          {
-            fprintf(stderr, "%s can't remove.\r\n", argv[i]);
+            fprintf(stderr, CAN_T_REMOVE, argv[i]);
          }
       }
 
@@ -86,7 +86,7 @@ int command_rm(int argc, char *argv[])
       {
          if(remove(argv[i]))
          {
-            fprintf(stderr, "%s can't remove.\r\n", argv[i]);
+            fprintf(stderr, CAN_T_REMOVE, argv[i]);
          }
       }
    }

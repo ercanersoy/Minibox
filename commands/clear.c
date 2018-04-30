@@ -10,7 +10,7 @@ int command_clear(int argc, char *argv[])
 #if HELP
       if(!strcmp(argv[2], "--help"))
       {
-         puts("MINIBOX clear - Output sound from PC speaker.");
+         puts(MINIBOX_CLEAR_CLEAR_THE_TERMINAL_SCREEN);
          puts("  MINIBOX clear");
          puts("  MINIBOX clear --help|--version\r\n");
          return 0;

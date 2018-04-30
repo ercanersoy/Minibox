@@ -1,0 +1,58 @@
+Minibox 0.4
+
+Kstl kaynakl sistemlerde k‡k Linux komutlar
+
+Telif Hakk (C) 2018 Ercan Ersoy
+Bu program bir ”zgr yazlmdr. (GNU Genel Kanu Lisans)
+
+Kullanm:
+
+  MINIBOX Komut [Argmanlar]
+  MINIBOX --help|--version
+
+Derleme:
+
+  Bu program GCC ile derlenmelidir.
+
+  DOS altnda derleme i‡in Makefile y”nergesi: make dos
+  DOS i‡in DJGPP kullanmalsnz.
+
+Commands:
+
+  beep
+  cat
+  cd
+  clear
+  cp
+  date
+  echo
+  help
+  ls
+  mkdir
+  mv
+  pwd
+  rm
+  rmdir
+  sh
+  time
+
+  Yardm i‡in --help argman vardr.
+  Srm bilgisi i‡in --version argman vardr.
+
+De§iŸim Gnl§:
+
+  0.4 (30.04.2018): Lisans i‡in GNU GPL srm 2.0'dan GNU GPL srm
+  3.0'a ge‡ildi. Yazm yanlŸlar dzeltildi. Dizin a§ac de§iŸtirildi
+  ve dil dosyalar eklendi. config.h'a dil ayplandrmas eklendi.
+  Trk‡e'ye ‡evrildi. De§iŸim gnl§ eklendi.
+
+  0.3 (29.07.2017): pwd, rm, sh ve time komutlarndaki hatalar
+  dzeltildi. date komutundaki gereksiz kod silindi.
+
+  0.2 (16.06.2017): rm komutundaki dzgn silememe hatas dzeltildi.
+  Derleme se‡eneklerinde Ana bileŸendeki yanlŸ #ifdef ”niŸlemcileri
+  silindi ve srm hatas dzeltildi. Kaynak kodda k‡k de§iŸiklikler
+  yapld. Makefile dosyas iyileŸtirildi. €alŸtrlabilir dosya
+  silindi. help komutu eklendi.
+
+  0.1 (25.04.2017): ˜lk srm ‡karld.

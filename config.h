@@ -2,6 +2,10 @@
  * MINIBOX Configure File *
  **************************/
 
+// Language Configure
+
+#define LANGUAGE EN  // EN or TR
+
 // Commands' Configures
 
 #define COMMAND_BEEP 1

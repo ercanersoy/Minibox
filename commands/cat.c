@@ -16,12 +16,12 @@ int command_cat(int argc, char *argv[])
 #if HELP
       if(!strcmp(argv[2], "--help"))
       {
-         puts("MINIBOX cat - Output specified file's contents.");
-         puts("  MINIBOX cat [options] file");
+         puts(MINIBOX_CAT_OUTPUT_SPECIFIED_FILE_S_CONTENTS);
+         puts(MINIBOX_CAT_OPTIONS_FILE);
          puts("  MINIBOX cat --help|--version\r\n");
-         puts("Options:");
-         puts("  -E: Ends are shown as \"$\".");
-         puts("  -T: Tabs are shown as \"^I\".");
+         puts(OPTIONS);
+         puts(E_ENDS_ARE_SHOWN_AS);
+         puts(T_TABS_ARE_SHOWN_AS);
          return 0;
       }
 #endif

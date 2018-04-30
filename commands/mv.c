@@ -10,9 +10,9 @@ int command_mv(int argc, char *argv[])
 #if HELP
    if(argc == 3 && !strcmp(argv[2], "--help"))
    {
-      puts("MINIBOX mv - Move and/or rename specified");
-      puts("file or directory to specified directory.");
-      puts("  MINIBOX mv source destination");
+      puts(MINIBOX_MV_MOVE_AND_OR_RENAME_SPECIFIED_FILE_OR_DIRECTORY_TO_SPECIFIED_DIRECTORY_1);
+      puts(MINIBOX_MV_MOVE_AND_OR_RENAME_SPECIFIED_FILE_OR_DIRECTORY_TO_SPECIFIED_DIRECTORY_2);
+      puts(MINIBOX_MV_SOURCE_DESTINATION);
       puts("  MINIBOX mv --help|--version");
       return 0;
    }
@@ -35,11 +35,11 @@ int command_mv(int argc, char *argv[])
    }
    else if(argc < 4)
    {
-      fputs("No enough arguments.\r\n", stderr);
+      fputs(NO_ENOUGH_ARGUMENTS, stderr);
    }
    else
    {
-      fputs("Too much arguments.\r\n", stderr);
+      fputs(TOO_MUCH_ARGUMENTS, stderr);
    }
 
    return 0;

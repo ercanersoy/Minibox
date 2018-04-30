@@ -10,8 +10,8 @@ int command_cp(int argc, char *argv[])
 #if HELP
    if(argc == 3 && !strcmp(argv[2], "--help"))
    {
-      puts("MINIBOX cp - Copy specified file or directory to specified directory.");
-      puts("  MINIBOX cp source destination");
+      puts(MINIBOX_CP_COPY_SPECIFIED_FILE_OR_DIRECTORY_TO_SPECIFIED_DIRECTORY);
+      puts(MINIBOX_CP_SOURCE_DESTINATION);
       puts("  MINIBOX cp --help|--version");
       return 0;
    }
@@ -29,16 +29,16 @@ int command_cp(int argc, char *argv[])
    {
       if(link(argv[2], argv[3]))
       { 
-         fprintf(stderr, "%s can\'t copy.\r\n", argv[2]);
+         fprintf(stderr, CAN_T_COPY, argv[2]);
       }
    }
    else if(argc < 4)
    {
-      fputs("No enough arguments.\r\n", stderr);
+      fputs(NO_ENOUGH_ARGUMENTS, stderr);
    }
    else
    {
-      fputs("Too much arguments.\r\n", stderr);
+      fputs(TOO_MUCH_ARGUMENTS, stderr);
    }
 
    return 0;

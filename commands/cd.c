@@ -11,7 +11,7 @@ int command_cd(int argc, char *argv[])
    {
       if(chdir(argv[2]))
       {
-         fprintf(stderr, "%s doesn't directory.\r\n", argv[3]);
+         fprintf(stderr, DOESN_T_DIRECTORY, argv[3]);
          return 1;
       }
    }

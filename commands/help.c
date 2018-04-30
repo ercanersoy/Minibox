@@ -8,7 +8,7 @@
 #if COMMAND_HELP
 int command_help(int argc, char *argv[])
 {
-   puts("Minibox 0.2 Commands:\r\n");
+   puts(MINIBOX_COMMANDS);
    puts("beep");
    puts("cat");
    puts("cd");

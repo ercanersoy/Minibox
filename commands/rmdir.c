@@ -12,8 +12,8 @@ int command_rmdir(int argc, char *argv[])
 #if HELP
    if(!strcmp(argv[2], "--help"))
    {
-      puts("MINIBOX rmdir - Removes specified directories.");
-      puts("  MINIBOX rmdir directories");
+      puts(MINIBOX_RMDIR_REMOVE_SPECIFIED_DIRECTORIES);
+      puts(MINIBOX_RMDIR_DIRECTORIES);
       puts("  MINIBOX rmdir --help|--version");
       return 0;
    }
@@ -31,7 +31,7 @@ int command_rmdir(int argc, char *argv[])
    {
       if(rmdir(argv[i]))
       {
-         fprintf(stderr, "%s can\'t remove.\r\n", argv[i]);
+         fprintf(stderr, CAN_T_REMOVE, argv[i]);
       }
    }
 

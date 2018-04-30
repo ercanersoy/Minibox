@@ -16,12 +16,14 @@ int command_date(int argc, char *argv[])
 #if HELP
    if(!strcmp(argv[2], "--help"))
    {
-      puts("MINIBOX date - Print or set system date and time.");
-      puts("  MINIBOX date [-s] [Format]");
+      puts(MINIBOX_DATE_PRINT_OR_SET_SYSTEM_DATE_AND_TIME);
+      puts(MINIBOX_DATE_S_FORMAT);
       puts("  MINIBOX date --help|--version\r\n");
-      puts("Options:");
-      puts("-s  Set system date and time.");
-      puts("Format  Specify fotmatted output string. String format is C type.");
+      puts(OPTIONS);
+      puts(S_SYSTEM_DATE_AND_TIME);
+      puts(FORMAT_SPECIFIY_FORMATTED_OUTPUT_STRING_STRING_FORMAT_IS_C_PRINTF_TYPE);
+      puts(EXAMPLE);
+      puts(DEFAULT_FORMAT_IS_ISO_TYPE);
       return 0;
    }
 #endif
