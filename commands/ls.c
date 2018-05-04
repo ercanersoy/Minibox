@@ -33,13 +33,13 @@ int command_ls(int argc, char *argv[])
 #if HELP
       if(!strcmp(argv[2], "--help"))
       {
-         puts(MINIBOX_LS_LIST_DIRECTORY_CONTENTS);
-         puts(MINIBOX_LS_OPTIONS_FILE);
+         puts(STRING_MINIBOX_LS_LIST_DIRECTORY_CONTENTS);
+         puts(STRING_MINIBOX_LS_OPTIONS_FILE);
          puts("  MINIBOX ls --help|--version\r\n");
-         puts(OPTIONS);
-         puts(_DISPLAY_OUTPUT_AS_ONE_COLUMN);
-         puts(A_DON_T_IGNORE_AND);
-         puts(L_DISPLAY_LONG_LISTING_FORMAT);
+         puts(STRING_OPTIONS);
+         puts(STRING__DISPLAY_OUTPUT_AS_ONE_COLUMN);
+         puts(STRING_A_DON_T_IGNORE_AND);
+         puts(STRING_L_DISPLAY_LONG_LISTING_FORMAT);
          return 0;
       }
 #endif

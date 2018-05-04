@@ -16,14 +16,14 @@ int command_date(int argc, char *argv[])
 #if HELP
    if(!strcmp(argv[2], "--help"))
    {
-      puts(MINIBOX_DATE_PRINT_OR_SET_SYSTEM_DATE_AND_TIME);
-      puts(MINIBOX_DATE_S_FORMAT);
+      puts(STRING_MINIBOX_DATE_PRINT_OR_SET_SYSTEM_DATE_AND_TIME);
+      puts(STRING_MINIBOX_DATE_S_FORMAT);
       puts("  MINIBOX date --help|--version\r\n");
-      puts(OPTIONS);
-      puts(S_SYSTEM_DATE_AND_TIME);
-      puts(FORMAT_SPECIFIY_FORMATTED_OUTPUT_STRING_STRING_FORMAT_IS_C_PRINTF_TYPE);
-      puts(EXAMPLE);
-      puts(DEFAULT_FORMAT_IS_ISO_TYPE);
+      puts(STRING_OPTIONS);
+      puts(STRING_S_SYSTEM_DATE_AND_TIME);
+      puts(STRING_FORMAT_SPECIFIY_FORMATTED_OUTPUT_STRING_STRING_FORMAT_IS_C_PRINTF_TYPE);
+      puts(STRING_EXAMPLE);
+      puts(STRING_DEFAULT_FORMAT_IS_ISO_TYPE);
       return 0;
    }
 #endif

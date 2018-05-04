@@ -17,13 +17,13 @@ int command_echo(int argc, char *argv[])
 #if HELP
    if(!strcmp(argv[2], "--help"))
    {
-      puts(MINIBOX_ECHO_PRINT_SPECIFIED_MESSAGES);
-      puts(MINIBOX_ECHO_OPTIONS_MESSAGES);
+      puts(STRING_MINIBOX_ECHO_PRINT_SPECIFIED_MESSAGES);
+      puts(STRING_MINIBOX_ECHO_OPTIONS_MESSAGES);
       puts("  MINIBOX echo --help|--version\r\n");
-      puts(OPTIONS);
-      puts(E_PRINTS_SPECIAL_CHARACTERS_MESSAGE_MUST_BE_QUOTED);
-      puts(CHARACTERS_ARE);
-      puts(N_IN_ADDITION_PRINTS_NEWLINE_CHARACTER);
+      puts(STRING_OPTIONS);
+      puts(STRING_E_PRINTS_SPECIAL_CHARACTERS_MESSAGE_MUST_BE_QUOTED);
+      puts(STRING_CHARACTERS_ARE);
+      puts(STRING_N_IN_ADDITION_PRINTS_NEWLINE_CHARACTER);
       return 0;
    }
 #endif

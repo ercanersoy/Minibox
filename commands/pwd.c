@@ -12,7 +12,7 @@ int command_pwd(int argc, char *argv[])
 #if HELP
    if(!strcmp(argv[2], "--help"))
    {
-      puts(MINIBOX_PWD_OUTPUT_CURRENT_DIRECTORY_S_NAME);
+      puts(STRING_MINIBOX_PWD_OUTPUT_CURRENT_DIRECTORY_S_NAME);
       puts("  MINIBOX pwd");
       puts("  MINIBOX pwd --help|--version");
       return 0;

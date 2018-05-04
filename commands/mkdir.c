@@ -12,8 +12,8 @@ int command_mkdir(int argc, char *argv[])
 #if HELP
    if(!strcmp(argv[2], "--help"))
    {
-      puts(MINIBOX_MKDIR_CREATES_SPECIFIED_DIRECTORIES);
-      puts(MINIBOX_MKDIR_DIRECTORIES);
+      puts(STRING_MINIBOX_MKDIR_CREATES_SPECIFIED_DIRECTORIES);
+      puts(STRING_MINIBOX_MKDIR_DIRECTORIES);
       puts("  MINIBOX mkdir --help|--version");
       return 0;
    }
@@ -31,7 +31,7 @@ int command_mkdir(int argc, char *argv[])
    {
       if(mkdir(argv[i], S_IWUSR))
       {
-         fprintf(stderr, CAN_T_CREATE, argv[i]);
+         fprintf(stderr, STRING_CAN_T_CREATE, argv[i]);
       }
    }
 

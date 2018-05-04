@@ -12,11 +12,11 @@ int command_sh(int argc, char *argv[])
 #if HELP
    if(!strcmp(argv[2], "--help"))
    {
-      puts(MINIBOX_SH_MINIBOX_SHELL);
+      puts(STRING_MINIBOX_SH_MINIBOX_SHELL);
       puts("  MINIBOX sh");
       puts("  MINIBOX sh --help|--version\r\n");
-      puts(NOTE);
-      puts(IN_MINIBOX_SHELL_GIVE_COMMAND_EXIT_TO_EXIT_SHELL);
+      puts(STRING_NOTE);
+      puts(STRING_IN_MINIBOX_SHELL_GIVE_COMMAND_EXIT_TO_EXIT_SHELL);
       return 0;
    }
 #endif

@@ -14,12 +14,12 @@ int command_beep(int argc, char *argv[])
 #if HELP
       if(!strcmp(argv[2], "--help"))
       {
-         puts(MINIBOX_BEEP_OUTPUT_SOUND_FROM_PC_SPEAKER);
-         puts(MINIBOX_BEEP_OPTIONS);
+         puts(STRING_MINIBOX_BEEP_OUTPUT_SOUND_FROM_PC_SPEAKER);
+         puts(STRING_MINIBOX_BEEP_OPTIONS);
          puts("  MINIBOX beep --help|--version\r\n");
-         puts(OPTIONS);
-         puts(FREQUENCY_SPECIFIY_SOUND_S_FROM_FREQUENCY);
-         puts(L_LENGTH_SPECIFIY_SOUND_S_LENGTH_AS_MILLISECONDS);
+         puts(STRING_OPTIONS);
+         puts(STRING_FREQUENCY_SPECIFIY_SOUND_S_FROM_FREQUENCY);
+         puts(STRING_L_LENGTH_SPECIFIY_SOUND_S_LENGTH_AS_MILLISECONDS);
          return 0;
       }
 #endif
@@ -52,7 +52,7 @@ int command_beep(int argc, char *argv[])
       
       else
       {
-         puts(INVALID_SYNTAX);
+         puts(STRING_INVALID_SYNTAX);
          return 1;
       }
    }

@@ -7,7 +7,7 @@
 #if VERSION
 void version(void)
 {
-   puts(MINIBOX_VERSION);
+   puts(STRING_MINIBOX_VERSION);
 }
 #endif
 
@@ -132,8 +132,8 @@ int main(int argc, char *argv[])
 #if HELP
       if(!strcmp(argv[1], "--help"))
       {
-         puts(MINIBOX_LINUX_COMMANDS_ON_DOS);
-         puts(MINIBOX_COMMAND_ARGUMENTS);
+         puts(STRING_MINIBOX_LINUX_COMMANDS_ON_DOS);
+         puts(STRING_MINIBOX_COMMAND_ARGUMENTS);
          puts("  MINIBOX --help|--version");
          puts("  MINIBOX ");
          return 0;
@@ -150,7 +150,7 @@ int main(int argc, char *argv[])
    }
    else if(argc < 2)
    {
-       puts(NO_ENOUGH_ARGUMENTS);
+       puts(STRING_NO_ENOUGH_ARGUMENTS);
        return 1;
    }
    
