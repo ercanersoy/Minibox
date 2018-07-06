@@ -1,14 +1,9 @@
-Minibox 0.4
+Minibox
 
 Kstl kaynakl sistemlerde k‡k Linux komutlar
 
-Telif Hakk (C) 2018 Ercan Ersoy
-Bu program bir ”zgr yazlmdr. (GNU Genel Kanu Lisans)
-
-Kullanm:
-
-  MINIBOX Komut [Argmanlar]
-  MINIBOX --help|--version
+Telif Hakk (C) 2017-2018 Ercan Ersoy
+Bu yazlm GNU Genel Kamu Lisans 3. srm altnda lisanlanmŸtr.
 
 Derleme:
 
@@ -16,6 +11,11 @@ Derleme:
 
   DOS altnda derleme i‡in Makefile y”nergesi: make dos
   DOS i‡in DJGPP kullanmalsnz.
+
+Kullanm:
+
+  MINIBOX Komut [Argmanlar]
+  MINIBOX --help|--version
 
 Commands:
 
@@ -36,9 +36,6 @@ Commands:
   sh
   time
 
-  Yardm i‡in --help argman vardr.
-  Srm bilgisi i‡in --version argman vardr.
-
 De§iŸim Gnl§:
 
   0.4 (30.04.2018): Lisans i‡in GNU GPL srm 2.0'dan GNU GPL srm
@@ -56,3 +53,7 @@ De§iŸim Gnl§:
   silindi. help komutu eklendi.
 
   0.1 (25.04.2017): ˜lk srm ‡karld.
+
+Not:
+
+  Linux, Linus Tovarlds'n kaytl markasdr.

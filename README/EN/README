@@ -1,14 +1,9 @@
-Minibox 0.4
+Minibox
 
 Small Linux commands for resource limited systems
 
-Copyright (C) 2018 Ercan Ersoy
-This program is free software. (GNU General Public License)
-
-Usage:
-
-  MINIBOX Command [Arguments]
-  MINIBOX --help|--version
+Copyright (C) 2017-2018 Ercan Ersoy
+This software is licensed under GNU General Public License version 3.
 
 Compile:
 
@@ -16,7 +11,12 @@ Compile:
 
   For compiling, Makefile directive for DOS: make dos
   For DOS, you must use DJGPP.
-  
+
+Usage:
+
+  MINIBOX Command [Arguments]
+  MINIBOX --help|--version
+
 Commands:
 
   beep
@@ -36,9 +36,6 @@ Commands:
   sh
   time
 
-  Argument --help is existing for help.
-  Argument --version is existing for version information.
-
 Changelog:
 
   0.4 (04-30-2018): Switch GNU GPL version 2.0 to GNU GPL version 3.0
@@ -52,6 +49,10 @@ Changelog:
   0.2 (06-16-2017): Fix delete not properly bug on rm.c. Fix wrong
   #ifdef preprocessors and fix version bug in main.c. Source codes
   minor change. Enhance Makefile file. Remove executable file. Add help
-  command. 
+  command.
 
   0.1 (04-25-2017): Create first version.
+
+Note:
+
+  Linux is a registered trademark of Linus Tovarlds.
