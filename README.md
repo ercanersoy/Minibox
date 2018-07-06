@@ -8,8 +8,6 @@ This software is licensed under GNU General Public License version 3.
 
 ## Compile
 
-Compile:
-
 The program must be compiled with GCC.
 
 For compiling, Makefile directive for DOS: make dos
