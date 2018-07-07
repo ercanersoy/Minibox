@@ -1,3 +1,6 @@
+# Makefile - Build file
+# Written by Ercan Ersoy.
+
 CC = gcc
 CFLAGS = -O3 -s -c
 LD = gcc

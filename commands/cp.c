@@ -1,6 +1,7 @@
-/***************************
- * MINIBOX cp Command File *
- ***************************/
+/*
+ *  cp.c - cp command source file
+ *  Written by Ercan Ersoy.
+ */
 
 #include "../minibox.h"
 
@@ -10,8 +11,8 @@ int command_cp(int argc, char *argv[])
 #if HELP
    if(argc == 3 && !strcmp(argv[2], "--help"))
    {
-      puts(STRING_MINIBOX_CP_COPY_SPECIFIED_FILE_OR_DIRECTORY_TO_SPECIFIED_DIRECTORY);
-      puts(STRING_MINIBOX_CP_SOURCE_DESTINATION);
+      puts(STRING_MINIBOX_CP_DESCRIPTION);
+      puts(STRING_MINIBOX_CP_USAGE);
       puts("  MINIBOX cp --help|--version");
       return 0;
    }
@@ -29,7 +30,7 @@ int command_cp(int argc, char *argv[])
    {
       if(link(argv[2], argv[3]))
       { 
-         fprintf(stderr, STRING_CAN_T_COPY, argv[2]);
+         fprintf(stderr, STRING_CANNOT_COPY, argv[2]);
       }
    }
    else if(argc < 4)

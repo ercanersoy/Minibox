@@ -1,6 +1,7 @@
-/************************************
- * Minibox help Command Source File *
- ************************************/
+/*
+ *  help.c - help command source file
+ *  Written by Ercan Ersoy.
+ */
 
 #include "../minibox.h"
 

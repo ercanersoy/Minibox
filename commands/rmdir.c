@@ -1,6 +1,7 @@
-/******************************
- * MINIBOX rmdir Command File *
- ******************************/
+/*
+ *  rmdir.c - rmdir command source file
+ *  Written by Ercan Ersoy.
+ */
 
 #include "../minibox.h"
 
@@ -12,8 +13,8 @@ int command_rmdir(int argc, char *argv[])
 #if HELP
    if(!strcmp(argv[2], "--help"))
    {
-      puts(STRING_MINIBOX_RMDIR_REMOVE_SPECIFIED_DIRECTORIES);
-      puts(STRING_MINIBOX_RMDIR_DIRECTORIES);
+      puts(STRING_MINIBOX_RMDIR_DESCRIPTION);
+      puts(STRING_MINIBOX_RMDIR_USAGE);
       puts("  MINIBOX rmdir --help|--version");
       return 0;
    }
@@ -31,7 +32,7 @@ int command_rmdir(int argc, char *argv[])
    {
       if(rmdir(argv[i]))
       {
-         fprintf(stderr, STRING_CAN_T_REMOVE, argv[i]);
+         fprintf(stderr, STRING_CANNOT_REMOVE, argv[i]);
       }
    }
 

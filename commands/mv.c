@@ -1,6 +1,7 @@
-/***************************
- * MINIBOX mv Command File *
- ***************************/
+/*
+ *  mv.c - mv command source file
+ *  Written by Ercan Ersoy.
+ */
 
 #include "../minibox.h"
 
@@ -10,9 +11,9 @@ int command_mv(int argc, char *argv[])
 #if HELP
    if(argc == 3 && !strcmp(argv[2], "--help"))
    {
-      puts(STRING_MINIBOX_MV_MOVE_AND_OR_RENAME_SPECIFIED_FILE_OR_DIRECTORY_TO_SPECIFIED_DIRECTORY_1);
-      puts(STRING_MINIBOX_MV_MOVE_AND_OR_RENAME_SPECIFIED_FILE_OR_DIRECTORY_TO_SPECIFIED_DIRECTORY_2);
-      puts(STRING_MINIBOX_MV_SOURCE_DESTINATION);
+      puts(STRING_MINIBOX_MV_DESCRIPTION_1);
+      puts(STRING_MINIBOX_MV_DESCRIPTION_2);
+      puts(STRING_MINIBOX_MV_USAGE);
       puts("  MINIBOX mv --help|--version");
       return 0;
    }
@@ -30,7 +31,7 @@ int command_mv(int argc, char *argv[])
    {
       if(rename(argv[2], argv[3]))
       { 
-         fprintf(stderr, "%s can\'t move.\r\n", argv[2]);
+         fprintf(stderr, STRING_CANNOT_MOVE, argv[2]);
       }
    }
    else if(argc < 4)

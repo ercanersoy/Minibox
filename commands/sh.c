@@ -1,6 +1,7 @@
-/****************************
- * MINIBOX sh Command  File *
- ****************************/
+/*
+ *  sh.c - sh command source file
+ *  Written by Ercan Ersoy.
+ */
 
 #include "../minibox.h"
 
@@ -12,11 +13,11 @@ int command_sh(int argc, char *argv[])
 #if HELP
    if(!strcmp(argv[2], "--help"))
    {
-      puts(STRING_MINIBOX_SH_MINIBOX_SHELL);
+      puts(STRING_MINIBOX_SH_DESCRIPTION);
       puts("  MINIBOX sh");
       puts("  MINIBOX sh --help|--version\r\n");
       puts(STRING_NOTE);
-      puts(STRING_IN_MINIBOX_SHELL_GIVE_COMMAND_EXIT_TO_EXIT_SHELL);
+      puts(STRING_MINIBOX_SH_EXIT);
       return 0;
    }
 #endif

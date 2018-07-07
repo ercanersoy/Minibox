@@ -1,6 +1,7 @@
-/*****************************
- * MINIBOX time Command File *
- *****************************/
+/*
+ *  time.c - time command source file
+ *  Written by Ercan Ersoy.
+ */
 
 #include "../minibox.h"
 
@@ -16,8 +17,8 @@ int command_time(int argc, char *argv[])
 #if HELP
    if(argc == 3 && !strcmp(argv[2], "--help"))
    {
-      puts(STRING_MINIBOX_TIME_MEASURE_SPECIFIED_COMMAND_S_EXECUTION_TIME_AS_SECOND);
-      puts(STRING_MINIBOX_TIME_COMMAND_ARGUMENT);
+      puts(STRING_MINIBOX_TIME_DESCRIPTION);
+      puts(STRING_MINIBOX_TIME_USAGE);
       puts("  MINIBOX time --help|--version");
       return 0;
    }

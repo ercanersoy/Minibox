@@ -1,6 +1,7 @@
-/***************************
- * MINIBOX cd Command File *
- ***************************/
+/*
+ *  cd.c - cd command source file
+ *  Written by Ercan Ersoy.
+ */
 
 #include "../minibox.h"
 
@@ -11,7 +12,7 @@ int command_cd(int argc, char *argv[])
    {
       if(chdir(argv[2]))
       {
-         fprintf(stderr, STRING_DOESN_T_DIRECTORY, argv[3]);
+         fprintf(stderr, STRING_DOES_NOT_DIRECTORY, argv[3]);
          return 1;
       }
    }

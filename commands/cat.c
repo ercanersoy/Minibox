@@ -1,6 +1,7 @@
-/****************************
- * MINIBOX cat Command File *
- ****************************/
+/*
+ *  cat.c - cat command source file
+ *  Written by Ercan Ersoy.
+ */
 
 #include "../minibox.h"
 
@@ -16,12 +17,12 @@ int command_cat(int argc, char *argv[])
 #if HELP
       if(!strcmp(argv[2], "--help"))
       {
-         puts(STRING_MINIBOX_CAT_OUTPUT_SPECIFIED_FILE_S_CONTENTS);
-         puts(STRING_MINIBOX_CAT_OPTIONS_FILE);
+         puts(STRING_MINIBOX_CAT_DESCRIPTION);
+         puts(STRING_MINIBOX_CAT_USAGE);
          puts("  MINIBOX cat --help|--version\r\n");
          puts(STRING_OPTIONS);
-         puts(STRING_E_ENDS_ARE_SHOWN_AS);
-         puts(STRING_T_TABS_ARE_SHOWN_AS);
+         puts(STRING_MINIBOX_CAT_OPTIONS_1);
+         puts(STRING_MINIBOX_CAT_OPTIONS_2);
          return 0;
       }
 #endif

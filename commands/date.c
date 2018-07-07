@@ -1,6 +1,7 @@
-/*****************************
- * Minibox date Command File *
- *****************************/
+/*
+ *  date.c - date command source file
+ *  Written by Ercan Ersoy.
+ */
 
 #include "../minibox.h"
 
@@ -16,14 +17,14 @@ int command_date(int argc, char *argv[])
 #if HELP
    if(!strcmp(argv[2], "--help"))
    {
-      puts(STRING_MINIBOX_DATE_PRINT_OR_SET_SYSTEM_DATE_AND_TIME);
-      puts(STRING_MINIBOX_DATE_S_FORMAT);
+      puts(STRING_MINIBOX_DATE_DESCRIPTION);
+      puts(STRING_MINIBOX_DATE_USAGE);
       puts("  MINIBOX date --help|--version\r\n");
       puts(STRING_OPTIONS);
-      puts(STRING_S_SYSTEM_DATE_AND_TIME);
-      puts(STRING_FORMAT_SPECIFIY_FORMATTED_OUTPUT_STRING_STRING_FORMAT_IS_C_PRINTF_TYPE);
-      puts(STRING_EXAMPLE);
-      puts(STRING_DEFAULT_FORMAT_IS_ISO_TYPE);
+      puts(STRING_MINIBOX_DATE_OPTIONS_1);
+      puts(STRING_MINIBOX_DATE_OPTIONS_2);
+      puts(STRING_MINIBOX_DATE_OPTIONS_3);
+      puts(STRING_MINIBOX_DATE_OPTIONS_4);
       return 0;
    }
 #endif

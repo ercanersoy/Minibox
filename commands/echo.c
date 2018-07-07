@@ -1,6 +1,7 @@
-/*****************************
- * MINIBOX echo Command File *
- *****************************/
+/*
+ *  echo.c - echo command source file
+ *  Written by Ercan Ersoy.
+ */
 
 #include "../minibox.h"
 
@@ -17,13 +18,13 @@ int command_echo(int argc, char *argv[])
 #if HELP
    if(!strcmp(argv[2], "--help"))
    {
-      puts(STRING_MINIBOX_ECHO_PRINT_SPECIFIED_MESSAGES);
-      puts(STRING_MINIBOX_ECHO_OPTIONS_MESSAGES);
+      puts(STRING_MINIBOX_ECHO_DESCRIPTION);
+      puts(STRING_MINIBOX_ECHO_USAGE);
       puts("  MINIBOX echo --help|--version\r\n");
       puts(STRING_OPTIONS);
-      puts(STRING_E_PRINTS_SPECIAL_CHARACTERS_MESSAGE_MUST_BE_QUOTED);
-      puts(STRING_CHARACTERS_ARE);
-      puts(STRING_N_IN_ADDITION_PRINTS_NEWLINE_CHARACTER);
+      puts(STRING_MINIBOX_ECHO_OPTIONS_1);
+      puts(STRING_MINIBOX_ECHO_OPTIONS_2);
+      puts(STRING_MINIBOX_ECHO_OPTIONS_3);
       return 0;
    }
 #endif

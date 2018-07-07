@@ -1,10 +1,11 @@
-/**************************
- * MINIBOX Configure File *
- **************************/
+/*
+ *  config.h - Configuration header file
+ *  Written by Ercan Ersoy.
+ */
 
 // Language Configure
 
-#define LANGUAGE EN  // EN or TR
+#define LANGUAGE TR  // EN or TR
 
 // Commands' Configures
 

@@ -1,6 +1,7 @@
-/****************************
- * MINIBOX Main Header File *
- ****************************/
+/*
+ *  minibox.h - Main header file
+ *  Written by Ercan Ersoy.
+ */
 
 #include <conio.h>
 #include <dirent.h>

@@ -1,6 +1,7 @@
-/**********************************
- * MINIBOX rm Command Source File *
- **********************************/
+/*
+ *  rm.c - rm command source file
+ *  Written by Ercan Ersoy.
+ */
 
 #include "../minibox.h"
 
@@ -49,11 +50,11 @@ int command_rm(int argc, char *argv[])
 #if HELP
    if(!strcmp(argv[2], "--help"))
    {
-      puts(STRING_MINIBOX_RM_REMOVE_SPECIFIED_FILES);
-      puts(STRING_MINIBOX_RM_R_ITEMS);
+      puts(STRING_MINIBOX_RM_DESCRIPTION);
+      puts(STRING_MINIBOX_RM_USAGE);
       puts("  MINIBOX rm --help|--version\r\n");
       puts(STRING_OPTION);
-      puts(STRING_R_REMOVE_SPECIFIED_DIRECTORIES_AND_THEIR_CONTENTS_RECURSIVELY);
+      puts(STRING_MINIBOX_RM_OPTION);
       return 0;
    }
 #endif
@@ -74,7 +75,7 @@ int command_rm(int argc, char *argv[])
       {
          if(item_remove(argv[i]))
          {
-            fprintf(stderr, STRING_CAN_T_REMOVE, argv[i]);
+            fprintf(stderr, STRING_CANNOT_REMOVE, argv[i]);
          }
       }
 
@@ -86,7 +87,7 @@ int command_rm(int argc, char *argv[])
       {
          if(remove(argv[i]))
          {
-            fprintf(stderr, STRING_CAN_T_REMOVE, argv[i]);
+            fprintf(stderr, STRING_CANNOT_REMOVE, argv[i]);
          }
       }
    }

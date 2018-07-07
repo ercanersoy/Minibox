@@ -1,6 +1,7 @@
-/****************************
- * MINIBOX Main Source File *
- ****************************/
+/*
+ *  main.c - Main source file
+ *  Written by Ercan Ersoy.
+ */
 
 #include "minibox.h"
 
@@ -132,8 +133,8 @@ int main(int argc, char *argv[])
 #if HELP
       if(!strcmp(argv[1], "--help"))
       {
-         puts(STRING_MINIBOX_LINUX_COMMANDS_ON_DOS);
-         puts(STRING_MINIBOX_COMMAND_ARGUMENTS);
+         puts(STRING_MINIBOX_DESCRIPTION);
+         puts(STRING_MINIBOX_USAGE);
          puts("  MINIBOX --help|--version");
          puts("  MINIBOX ");
          return 0;
