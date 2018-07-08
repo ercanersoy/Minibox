@@ -5,27 +5,27 @@
 
 #include "../minibox.h"
 
-#if COMMAND_MV
+#ifdef COMMAND_MV
 int command_mv(int argc, char *argv[])
 {
-#if HELP
+   #ifdef HELP
    if(argc == 3 && !strcmp(argv[2], "--help"))
    {
       puts(STRING_MINIBOX_MV_DESCRIPTION_1);
       puts(STRING_MINIBOX_MV_DESCRIPTION_2);
       puts(STRING_MINIBOX_MV_USAGE);
       puts("  MINIBOX mv --help|--version");
-      return 0;
+      return EXIT_SUCCESS;
    }
-#endif
+   #endif
 
-#if VERSION
+   #ifdef VERSION
    if(argc == 3 && !strcmp(argv[2], "--version"))
    {
       version();
-      return 0;
+      return EXIT_SUCCESS;
    }
-#endif
+   #endif
 
    if(argc == 4)
    {
@@ -43,6 +43,6 @@ int command_mv(int argc, char *argv[])
       fputs(STRING_TOO_MUCH_ARGUMENTS, stderr);
    }
 
-   return 0;
+   return EXIT_SUCCESS;
 }
 #endif

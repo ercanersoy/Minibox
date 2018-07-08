@@ -10,23 +10,23 @@ int command_mkdir(int argc, char *argv[])
 {
    int i = 2;
 
-#if HELP
+   #if HELP
    if(!strcmp(argv[2], "--help"))
    {
       puts(STRING_MINIBOX_MKDIR_DESCRIPTION);
       puts(STRING_MINIBOX_MKDIR_USAGE);
       puts("  MINIBOX mkdir --help|--version");
-      return 0;
+      return EXIT_SUCCESS;
    }
-#endif
+   #endif
 
-#if VERSION
+   #if VERSION
    if(!strcmp(argv[2], "--version"))
    {
       version();
-      return 0;
+      return EXIT_SUCCESS;
    }
-#endif
+   #endif
 
    for(i; i < argc; i++)
    {
@@ -36,6 +36,6 @@ int command_mkdir(int argc, char *argv[])
       }
    }
 
-   return 0;
+   return EXIT_SUCCESS;
 }
 #endif

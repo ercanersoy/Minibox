@@ -5,28 +5,28 @@
 
 #include "../minibox.h"
 
-#if COMMAND_RMDIR
+#ifdef COMMAND_RMDIR
 int command_rmdir(int argc, char *argv[])
 {
    int i = 2;
 
-#if HELP
+   #ifdef HELP
    if(!strcmp(argv[2], "--help"))
    {
       puts(STRING_MINIBOX_RMDIR_DESCRIPTION);
       puts(STRING_MINIBOX_RMDIR_USAGE);
       puts("  MINIBOX rmdir --help|--version");
-      return 0;
+      return EXIT_SUCCESS;
    }
-#endif
+   #endif
 
-#if VERSION
+   #ifdef VERSION
    if(!strcmp(argv[2], "--version"))
    {
       version();
-      return 0;
+      return EXIT_SUCCESS;
    }
-#endif
+   #endif
 
    for(i; i < argc; i++)
    {
@@ -36,6 +36,6 @@ int command_rmdir(int argc, char *argv[])
       }
    }
 
-   return 0;
+   return EXIT_SUCCESS;
 }
 #endif

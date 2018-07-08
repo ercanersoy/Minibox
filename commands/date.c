@@ -5,7 +5,7 @@
 
 #include "../minibox.h"
 
-#if COMMAND_DATE
+#ifdef COMMAND_DATE
 int command_date(int argc, char *argv[])
 {
    time_t datetime_time_t;
@@ -14,7 +14,7 @@ int command_date(int argc, char *argv[])
    struct time set_time;
    char formatted_string[DATE_AND_TIME_STRING_MAX];
 
-#if HELP
+   #ifdef HELP
    if(!strcmp(argv[2], "--help"))
    {
       puts(STRING_MINIBOX_DATE_DESCRIPTION);
@@ -25,44 +25,44 @@ int command_date(int argc, char *argv[])
       puts(STRING_MINIBOX_DATE_OPTIONS_2);
       puts(STRING_MINIBOX_DATE_OPTIONS_3);
       puts(STRING_MINIBOX_DATE_OPTIONS_4);
-      return 0;
+      return EXIT_SUCCESS;
    }
-#endif
+   #endif
 
-#if VERSION
+   #ifdef VERSION
    if(!strcmp(argv[2], "--version"))
    {
       version();
-      return 0;
+      return EXIT_SUCCESS;
    }
-#endif
+   #endif
 
    datetime_time_t = time(NULL);
 
    if(argc < 3)
    {
       puts(ctime(&datetime_time_t));
-	  return 0;
+      return EXIT_SUCCESS;
    }
    else
    {
       if(!strcmp(argv[2], "-s"))
       {
          sscanf(argv[3], "%4hu-%2hhu-%2hhu %2hhu:%2hhu:%2hhu", &(set_date.da_year), &(set_date.da_mon), &(set_date.da_day), &(set_time.ti_hour), &(set_time.ti_min), &(set_time.ti_sec));
-		 
-		 printf("%d:%d:%d", set_date.da_year, set_date.da_mon, set_date.da_day);
-		 
-		 setdate(&set_date);
-		 settime(&set_time);
-		 
-         return 0;
+
+         printf("%d:%d:%d", set_date.da_year, set_date.da_mon, set_date.da_day);
+
+         setdate(&set_date);
+         settime(&set_time);
+
+         return EXIT_SUCCESS;
       }
       else
       {
          datetime_tm = localtime(&datetime_time_t);
          strftime(formatted_string, DATE_AND_TIME_STRING_MAX, argv[2], datetime_tm);
          puts(formatted_string);
-         return 0;
+         return EXIT_SUCCESS;
       }
    }
 }

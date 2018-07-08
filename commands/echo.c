@@ -5,7 +5,7 @@
 
 #include "../minibox.h"
 
-#if COMMAND_ECHO
+#ifdef COMMAND_ECHO
 int command_echo(int argc, char *argv[])
 {
    char backslash_escapes = 0;
@@ -15,7 +15,7 @@ int command_echo(int argc, char *argv[])
    int j = 0;
    char character;
 
-#if HELP
+   #ifdef HELP
    if(!strcmp(argv[2], "--help"))
    {
       puts(STRING_MINIBOX_ECHO_DESCRIPTION);
@@ -25,17 +25,17 @@ int command_echo(int argc, char *argv[])
       puts(STRING_MINIBOX_ECHO_OPTIONS_1);
       puts(STRING_MINIBOX_ECHO_OPTIONS_2);
       puts(STRING_MINIBOX_ECHO_OPTIONS_3);
-      return 0;
+      return EXIT_SUCCESS;
    }
-#endif
+   #endif
 
-#if VERSION
+   #ifdef VERSION
    if(!strcmp(argv[2], "--version"))
    {
       version();
-      return 0;
+      return EXIT_SUCCESS;
    }
-#endif
+   #endif
 
    if(!strcmp(argv[2], "-e"))
    {
@@ -150,6 +150,6 @@ int command_echo(int argc, char *argv[])
       putchar('\n');
    }
 
-   return 0;
+   return EXIT_SUCCESS;
 }
 #endif

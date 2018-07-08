@@ -5,7 +5,7 @@
 
 #include "../minibox.h"
 
-#if COMMAND_RM
+#ifdef COMMAND_RM
 char item_remove(char *removing_item_path)
 {
    DIR *element;
@@ -47,7 +47,7 @@ int command_rm(int argc, char *argv[])
 {
    int i = 2;
 
-#if HELP
+   #ifdef HELP
    if(!strcmp(argv[2], "--help"))
    {
       puts(STRING_MINIBOX_RM_DESCRIPTION);
@@ -55,17 +55,17 @@ int command_rm(int argc, char *argv[])
       puts("  MINIBOX rm --help|--version\r\n");
       puts(STRING_OPTION);
       puts(STRING_MINIBOX_RM_OPTION);
-      return 0;
+      return EXIT_SUCCESS;
    }
-#endif
+   #endif
 
-#if VERSION
+   #ifdef VERSION
    if(!strcmp(argv[2], "--version"))
    {
       version();
-      return 0;
+      return EXIT_SUCCESS;
    }
-#endif
+   #endif
 
    if(!strcmp(argv[2], "-r"))
    {
@@ -79,7 +79,7 @@ int command_rm(int argc, char *argv[])
          }
       }
 
-      return 0;
+      return EXIT_SUCCESS;
    }
    else
    {
@@ -92,6 +92,6 @@ int command_rm(int argc, char *argv[])
       }
    }
 
-   return 0;
+   return EXIT_SUCCESS;
 }
 #endif

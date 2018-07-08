@@ -5,7 +5,7 @@
 
 #include "../minibox.h"
 
-#if COMMAND_TIME
+#ifdef COMMAND_TIME
 int command_time(int argc, char *argv[])
 {
    int i = 0;
@@ -14,23 +14,23 @@ int command_time(int argc, char *argv[])
    struct timeval end;
    long double measured_time = 0.0;
 
-#if HELP
+   #ifdef HELP
    if(argc == 3 && !strcmp(argv[2], "--help"))
    {
       puts(STRING_MINIBOX_TIME_DESCRIPTION);
       puts(STRING_MINIBOX_TIME_USAGE);
       puts("  MINIBOX time --help|--version");
-      return 0;
+      return EXIT_SUCCESS;
    }
-#endif
+   #endif
 
-#if VERSION
+   #if VERSION
    if(argc == 3 && !strcmp(argv[2], "--version"))
    {
       version();
-      return 0;
+      return EXIT_SUCCESS;
    }
-#endif
+   #endif
 
    if(argc > 2)
    {

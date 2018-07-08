@@ -5,28 +5,28 @@
 
 #include "../minibox.h"
 
-#if COMMAND_PWD
+#ifdef COMMAND_PWD
 int command_pwd(int argc, char *argv[])
 {
    char *buffer;
 
-#if HELP
+   #ifdef HELP
    if(!strcmp(argv[2], "--help"))
    {
       puts(STRING_MINIBOX_PWD_DESCRIPTION);
       puts("  MINIBOX pwd");
       puts("  MINIBOX pwd --help|--version");
-      return 0;
+      return EXIT_SUCCESS;
    }
-#endif
+   #endif
 
-#if VERSION
+   #ifdef VERSION
    else if(!strcmp(argv[2], "--version"))
    {
       version();
-      return 0;
+      return EXIT_SUCCESS;
    }
-#endif
+   #endif
 
    else
    {
@@ -35,6 +35,6 @@ int command_pwd(int argc, char *argv[])
       free(buffer);
    }
 
-   return 0;
+   return EXIT_SUCCESS;
 }
 #endif

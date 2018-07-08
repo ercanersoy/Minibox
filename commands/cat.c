@@ -5,7 +5,7 @@
 
 #include "../minibox.h"
 
-#if COMMAND_CAT
+#ifdef COMMAND_CAT
 int command_cat(int argc, char *argv[])
 {
    int i = 2;
@@ -14,7 +14,7 @@ int command_cat(int argc, char *argv[])
    unsigned char show_ends = 0;
    unsigned char show_tabs = 0; 
 
-#if HELP
+   #ifdef HELP
       if(!strcmp(argv[2], "--help"))
       {
          puts(STRING_MINIBOX_CAT_DESCRIPTION);
@@ -23,17 +23,17 @@ int command_cat(int argc, char *argv[])
          puts(STRING_OPTIONS);
          puts(STRING_MINIBOX_CAT_OPTIONS_1);
          puts(STRING_MINIBOX_CAT_OPTIONS_2);
-         return 0;
+         return EXIT_SUCCESS;
       }
-#endif
+   #endif
 
-#if VERSION
+   #ifdef VERSION
       if(!strcmp(argv[2], "--version"))
       {
          version();
-         return 0;
+         return EXIT_SUCCESS;
       }
-#endif
+   #endif
 
    for(i; i < argc; i++)
    {
@@ -71,6 +71,6 @@ int command_cat(int argc, char *argv[])
 
    fclose(file_resource);
 
-   return 0;
+   return EXIT_SUCCESS;
 }
 #endif

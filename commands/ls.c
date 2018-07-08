@@ -7,7 +7,7 @@
 
 #define MAX_PATH_LENGTH 260
 
-#if COMMAND_LS
+#ifdef COMMAND_LS
 void path_current_directory(char *path)
 {
    getcwd(path, MAX_PATH_LENGTH);
@@ -31,7 +31,7 @@ int command_ls(int argc, char *argv[])
 
    if(argc > 2)
    {
-#if HELP
+   #ifdef HELP
       if(!strcmp(argv[2], "--help"))
       {
          puts(STRING_MINIBOX_LS_DESCRIPTION);
@@ -41,17 +41,17 @@ int command_ls(int argc, char *argv[])
          puts(STRING_MINIBOX_LS_OPTIONS_1);
          puts(STRING_MINIBOX_LS_OPTIONS_2);
          puts(STRING_MINIBOX_LS_OPTIONS_3);
-         return 0;
+         return EXIT_SUCCESS;
       }
-#endif
+   #endif
 
-#if VERSION
+   #ifdef VERSION
       if(!strcmp(argv[2], "--version"))
       {
          version();
-         return 0;
+         return EXIT_SUCCESS;
       }
-#endif
+   #endif
 
       for(i; i < argc; i++)
       {

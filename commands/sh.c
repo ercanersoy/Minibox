@@ -5,12 +5,12 @@
 
 #include "../minibox.h"
 
-#if COMMAND_SH
+#ifdef COMMAND_SH
 int command_sh(int argc, char *argv[])
 {
    char *command_line;
    
-#if HELP
+   #ifdef HELP
    if(!strcmp(argv[2], "--help"))
    {
       puts(STRING_MINIBOX_SH_DESCRIPTION);
@@ -18,17 +18,17 @@ int command_sh(int argc, char *argv[])
       puts("  MINIBOX sh --help|--version\r\n");
       puts(STRING_NOTE);
       puts(STRING_MINIBOX_SH_EXIT);
-      return 0;
+      return EXIT_SUCCESS;
    }
-#endif
+   #endif
 
-#if VERSION
+   #ifdef VERSION
    else if(!strcmp(argv[2], "--version"))
    {
       version();
-      return 0;
+      return EXIT_SUCCESS;
    }
-#endif
+   #endif
 
    command_line = (char *) malloc(MAX_COMMAND_LINE_LENGTH);
 
@@ -39,7 +39,7 @@ int command_sh(int argc, char *argv[])
    
    if(!strcmp(command_line, "exit\n"))
    {
-      exit(0);
+      exit(EXIT_SUCCESS);
    }
    else if(strcmp(command_line, "\n"))
    {
@@ -50,6 +50,6 @@ int command_sh(int argc, char *argv[])
 
    free(command_line);
 
-   return 0;
+   return EXIT_SUCCESS;
 }
 #endif

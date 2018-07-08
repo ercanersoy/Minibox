@@ -5,7 +5,7 @@
 
 #include "../minibox.h"
 
-#if COMMAND_CD
+#ifdef COMMAND_CD
 int command_cd(int argc, char *argv[])
 {
    if(argc == 3)
@@ -13,10 +13,10 @@ int command_cd(int argc, char *argv[])
       if(chdir(argv[2]))
       {
          fprintf(stderr, STRING_DOES_NOT_DIRECTORY, argv[3]);
-         return 1;
+         return EXIT_FAILURE;
       }
    }
    
-   return 0;
+   return EXIT_SUCCESS;
 }
 #endif

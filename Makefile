@@ -2,9 +2,9 @@
 # Written by Ercan Ersoy.
 
 CC = gcc
-CFLAGS = -O3 -s -c
+CFLAGS = -O1 -s -c
 LD = gcc
-LDFLAGS = -O3 -s
+LDFLAGS = -O1 -s
 
 all: minibox*
 

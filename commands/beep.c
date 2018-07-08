@@ -5,14 +5,14 @@
 
 #include "../minibox.h"
 
-#if COMMAND_BEEP
+#ifdef COMMAND_BEEP
 int command_beep(int argc, char *argv[])
 {
    int i = 2;
    int frequency = 750;
    int length = 1000;
 
-#if HELP
+   #ifdef HELP
       if(!strcmp(argv[2], "--help"))
       {
          puts(STRING_MINIBOX_BEEP_DESCRIPTION);
@@ -21,17 +21,17 @@ int command_beep(int argc, char *argv[])
          puts(STRING_OPTIONS);
          puts(STRING_MINIBOX_BEEP_OPTIONS_1);
          puts(STRING_MINIBOX_BEEP_OPTIONS_2);
-         return 0;
+         return EXIT_SUCCESS;
       }
-#endif
+   #endif
 
-#if VERSION
+   #ifdef VERSION
       if(!strcmp(argv[2], "--version"))
       {
          version();
-         return 0;
+         return EXIT_SUCCESS;
       }
-#endif
+   #endif
 
    for(i; i < argc; i++)
    {
@@ -54,7 +54,7 @@ int command_beep(int argc, char *argv[])
       else
       {
          puts(STRING_INVALID_SYNTAX);
-         return 1;
+         return EXIT_FAILURE;
       }
    }
 
