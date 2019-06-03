@@ -57,7 +57,7 @@
    #define STRING_MINIBOX_TIME_DESCRIPTION "MINIBOX time - Belirtilen komutun áalçütçrçlma zamançnç saniye olarak îláer."
    #define STRING_MINIBOX_TIME_USAGE "  MINIBOX time Komut [ArgÅman]"
    #define STRING_MINIBOX_USAGE "  MINIBOX Komut [ArgÅmanlar]"
-   #define STRING_MINIBOX_VERSION "Minibox sÅrÅmÅ: 0.4"
+   #define STRING_MINIBOX_VERSION "Minibox sÅrÅmÅ: 0.5"
    #define STRING_NO_ENOUGH_ARGUMENTS "ArgÅmanlar yeterli deßil."
    #define STRING_NOTE "Not:"
    #define STRING_OPTION "Seáenek:"

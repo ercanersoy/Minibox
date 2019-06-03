@@ -2,8 +2,9 @@ Minibox
 
 Kstl kaynakl sistemlerde k‡k Linux komutlar
 
-Telif Hakk (C) 2017-2018 Ercan Ersoy
-Bu yazlm GNU Genel Kamu Lisans 3. srm altnda lisanlanmŸtr.
+Telif Hakk (C) 2017-2019 Ercan Ersoy
+Bu yazlm GNU Genel Kamu Lisans 2. srm ve GNU Genel Kamu Lisans
+3. srm altnda lisanlanmŸtr.
 
 Derleme:
 
@@ -17,7 +18,7 @@ Kullanm:
   MINIBOX Komut [Argmanlar]
   MINIBOX --help|--version
 
-Commands:
+Komutlar:
 
   beep
   cat
@@ -38,21 +39,42 @@ Commands:
 
 De§iŸim Gnl§:
 
-  0.4 (30.04.2018): Lisans i‡in GNU GPL srm 2.0'dan GNU GPL srm
-  3.0'a ge‡ildi. Yazm yanlŸlar dzeltildi. Dizin a§ac de§iŸtirildi
-  ve dil dosyalar eklendi. config.h'a dil ayplandrmas eklendi.
-  Trk‡e'ye ‡evrildi. De§iŸim gnl§ eklendi.
+  0.5 (03.06.2019):
+    - Lisans i‡in GNU GPL srm 2.0 ve GNU GPL srm 3.0 olarak ‡ift
+      lisanslamaya ge‡ildi.
+    - BaŸlk dosyalarndaki s”zceler dzeltildi.
+    - S”zcelerin makrolarnn adlar yeniden adlandrld.
+    - Kaynak dosyalar standartlaŸtrlma i‡in gncellendi.
+    - "config.h" dosyasnda yanlŸ varsaylan dil dzeltildi.
+    - ".gitignore"'ye ".o" bi‡imi eklendi.
+    - ˜liki dosyalar i‡in dizin yaps de§iŸtirildi.
+    - ˜nŸa ayarlar -O1 iyileŸtirilmesiyle de§iŸtirildi ve ikili
+      ikili dosyalar gncellendi.
+    - "README"'ler ve "README.md" gncellendi.
 
-  0.3 (29.07.2017): pwd, rm, sh ve time komutlarndaki hatalar
-  dzeltildi. date komutundaki gereksiz kod silindi.
+  0.4 (30.04.2018):
+    - Lisans i‡in GNU GPL srm 2.0'dan GNU GPL srm 3.0'a ge‡ildi.
+    - Yazm yanlŸlar dzeltildi.
+    - Dizin a§ac de§iŸtirildi ve dil dosyalar eklendi.
+    - "config.h"'a dil ayplandrmas eklendi.
+    - Trk‡e'ye ‡evrildi.
+    - De§iŸim gnl§ eklendi.
 
-  0.2 (16.06.2017): rm komutundaki dzgn silememe hatas dzeltildi.
-  Derleme se‡eneklerinde Ana bileŸendeki yanlŸ #ifdef ”niŸlemcileri
-  silindi ve srm hatas dzeltildi. Kaynak kodda k‡k de§iŸiklikler
-  yapld. Makefile dosyas iyileŸtirildi. €alŸtrlabilir dosya
-  silindi. help komutu eklendi.
+  0.3 (16.06.2017):
+    - pwd, rm, sh ve time komutlarndaki hatalar dzeltildi.
+    - date komutundaki gereksiz kod silindi.
 
-  0.1 (25.04.2017): ˜lk srm ‡karld.
+  0.2 (06-16-2017):
+    - rm komutundaki dzgn silememe hatas dzeltildi.
+    - Derleme se‡eneklerinde Ana bileŸendeki yanlŸ #ifdef
+      ”niŸlemcileri silindi ve srm hatas dzeltildi.
+    - Kaynak kodda k‡k de§iŸiklikler yapld.
+    - help komutu eklendi.
+    - Makefile dosyas iyileŸtirildi.
+    - €alŸtrlabilir dosya silindi.
+
+  0.1 (25.04.2017):
+    - ˜lk srm ‡karld.
 
 Not:
 
