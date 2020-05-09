@@ -44,6 +44,15 @@ You should be compiled this command line is given below.
 
 ## Changelog
 
+### 0.6 (05-09-2020):
+* Updated "README.md" file and "README" files including changelog of previous versions.
+* Deleted "binaries" directory.
+* Updated "Makefile" file.
+* Updated ".gitignore" file.
+* Converted forgotten files with LF line ending to CR/LF line ending.
+* Updated language header files.
+* Updated verison information.
+
 ### 0.5 (06-03-2019):
 * Switched to dual licencing as GNU GPL version 2.0 and GNU GPL version 3.0.
 * Updated language strings at header files.
