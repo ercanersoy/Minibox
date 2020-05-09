@@ -1,81 +1,109 @@
-Minibox
+- Minibox -
 
-Kstl kaynakl sistemlerde k‡k Linux komutlar
+Kstl kaynaklar i‡in k‡k Linux komutlar
 
-Telif Hakk (C) 2017-2019 Ercan Ersoy
-Bu yazlm GNU Genel Kamu Lisans 2. srm ve GNU Genel Kamu Lisans
-3. srm altnda lisanlanmŸtr.
+Telif Hakk (C) 2017-2020 Ercan Ersoy
 
-Derleme:
+Bu yazlm, GNU Genel Kamu Lisans 2. srm ve
+GNU Genel Kamu Lisans 3. srm altnda lisanslanmŸtr.
 
-  Bu program GCC ile derlenmelidir.
 
-  DOS altnda derleme i‡in Makefile y”nergesi: make dos
-  DOS i‡in DJGPP kullanmalsnz.
+-- Derleme --
 
-Kullanm:
+Minibox program, GCC ile derlenmelidir.
 
-  MINIBOX Komut [Argmanlar]
-  MINIBOX --help|--version
 
-Komutlar:
+--- MS-DOS, FreeDOS ve benzeri ---
 
-  beep
-  cat
-  cd
-  clear
-  cp
-  date
-  echo
-  help
-  ls
-  mkdir
-  mv
-  pwd
-  rm
-  rmdir
-  sh
-  time
+DJGPP kullanmalsnz.
 
-De§iŸim Gnl§:
+AŸa§da verilen komut satryla derlemeniz gerekir.
 
-  0.5 (03.06.2019):
-    - Lisans i‡in GNU GPL srm 2.0 ve GNU GPL srm 3.0 olarak ‡ift
-      lisanslamaya ge‡ildi.
-    - BaŸlk dosyalarndaki s”zceler dzeltildi.
-    - S”zcelerin makrolarnn adlar yeniden adlandrld.
-    - Kaynak dosyalar standartlaŸtrlma i‡in gncellendi.
-    - "config.h" dosyasnda yanlŸ varsaylan dil dzeltildi.
-    - ".gitignore"'ye ".o" bi‡imi eklendi.
-    - ˜liki dosyalar i‡in dizin yaps de§iŸtirildi.
-    - ˜nŸa ayarlar -O1 iyileŸtirilmesiyle de§iŸtirildi ve ikili
-      ikili dosyalar gncellendi.
-    - "README"'ler ve "README.md" gncellendi.
+    make dos
 
-  0.4 (30.04.2018):
-    - Lisans i‡in GNU GPL srm 2.0'dan GNU GPL srm 3.0'a ge‡ildi.
-    - Yazm yanlŸlar dzeltildi.
-    - Dizin a§ac de§iŸtirildi ve dil dosyalar eklendi.
-    - "config.h"'a dil ayplandrmas eklendi.
-    - Trk‡e'ye ‡evrildi.
-    - De§iŸim gnl§ eklendi.
 
-  0.3 (16.06.2017):
-    - pwd, rm, sh ve time komutlarndaki hatalar dzeltildi.
-    - date komutundaki gereksiz kod silindi.
+-- Kullanm --
 
-  0.2 (06-16-2017):
-    - rm komutundaki dzgn silememe hatas dzeltildi.
-    - Derleme se‡eneklerinde Ana bileŸendeki yanlŸ #ifdef
-      ”niŸlemcileri silindi ve srm hatas dzeltildi.
-    - Kaynak kodda k‡k de§iŸiklikler yapld.
-    - help komutu eklendi.
-    - Makefile dosyas iyileŸtirildi.
-    - €alŸtrlabilir dosya silindi.
+    MINIBOX Komut [Argmanlar]
+    MINIBOX --help|--version
 
-  0.1 (25.04.2017):
-    - ˜lk srm ‡karld.
 
-Not:
+-- Komutlar --
 
-  Linux, Linus Tovarlds'n kaytl bir ticarŒ markasdr.
+  * beep
+  * cat
+  * cd
+  * clear
+  * cp
+  * date
+  * echo
+  * help
+  * ls
+  * mkdir
+  * mv
+  * pwd
+  * rm
+  * rmdir
+  * sh
+  * time
+
+
+-- De§iŸim Gnl§ --
+
+
+--- 0.5 (06-03-2019) ---
+
+* GNU GPL srm 2.0 ve GNU GPL srm 3.0 olarak ‡ift lisanslamaya ge‡ilmiŸtir.
+* BaŸlk dosyalarnda dil s”zceleri gncellendi.
+* S”zcelerin ”n iŸlemci isimleri gncellendi.
+* StandartlaŸma i‡in baŸlk ve kaynak kod dosyalar gncellendi.
+* "config.h" dosyasnda yanlŸ varsaylan dil yaplandrlmas dzeltildi.
+* ".o" deseni, ".gitignore" dosyasna eklendi.
+* ˜kili dosyalar i‡in dizin yaps gncellendi.
+* ˜nŸa ayarlar, -O1 iyileŸtirmesi olarak de§iŸtirildi.
+* €alŸtrlabilir dosya gncellendi.
+* "README" dosyalar ve "README.md" dosyas gncellendi.
+* Srm bilgisi gncellendi.
+* De§iŸim gnl§ gncellendi.
+
+
+--- 0.4 (04-30-2018) ---
+
+* Bu yazlmn lisans to GNU GPL srm 3.0 olarak de§iŸtirildi.
+* Yazm hatalar dzeltildi.
+* Dizin yaps gncellendi.
+* Dil dosyalar eklendi.
+* "config.h" dosyasna dil yaplandrlmas eklendi.
+* Trk‡e ‡evirileri yapld.
+* Srm bilgisi gncellendi.
+* De§iŸim gnl§ eklendi.
+
+
+--- 0.3 (07-29-2017) ---
+
+* pwd, rm, sh and time komutlarndaki hatalar gncellendi.
+* date komutunda fazla kodlar ‡kartld.
+* €alŸtrlabilir dosya eklendi.
+* Srm bilgisi gncellendi.
+
+
+--- 0.2 (06-16-2017) ---
+
+* rm komutunda dzgn silmeme hatas dzeltildi.
+* Ana bileŸende yanlŸ #ifdef ”n iŸlemci komutu ve yanlŸ srm hatas dzeltildi.
+* Minibox kodlarnda ufak de§iŸiklikler yapld.
+* €alŸtrlabilir dosya silindi.
+* help komutu eklendi.
+* Makefile dosyas geniŸletildi.
+* Srm bilgisi gncellendi.
+
+--- 0.1 (04-25-2017) ---
+
+* ˜lk srm
+
+
+-- Notes --
+
+* FreeDOS, Jim Hall'n kaytl ticari markasdr.
+* Linux, Linus Tovarlds'n kaytl ticari markasdr.
+* MS-DOS, Microsoft Firmas'nn kaytl ticari markasdr.
