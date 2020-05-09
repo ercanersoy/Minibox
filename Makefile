@@ -6,11 +6,10 @@ CFLAGS = -O1 -s -c
 LD = gcc
 LDFLAGS = -O1 -s
 
-all: minibox*
+dos: bin/minibox.exe
 
-dos: minibox.exe
-
-minibox.exe: main.o commands/beep.o commands/cat.o commands/cd.o commands/clear.o commands/cp.o commands/date.o commands/echo.o commands/help.o commands/ls.o commands/mkdir.o commands/mv.o commands/pwd.o commands/rm.o commands/rmdir.o commands/sh.o commands/time.o
+bin/minibox.exe: main.o commands/beep.o commands/cat.o commands/cd.o commands/clear.o commands/cp.o commands/date.o commands/echo.o commands/help.o commands/ls.o commands/mkdir.o commands/mv.o commands/pwd.o commands/rm.o commands/rmdir.o commands/sh.o commands/time.o
+	mkdir bin
 	$(LD) $(LDFLAGS) $? -o $@
 
 main.o: main.c
@@ -64,6 +63,8 @@ commands/sh.o: commands/sh.c
 commands/time.o: commands/time.c
 	$(CC) $(CFLAGS) $? -o $@
 
-clean-obj:
+clean:
 	del main.o
 	del commands\*.o
+	del bin\*.*
+	rmdir bin
