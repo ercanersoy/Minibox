@@ -49,5 +49,5 @@ You should be compiled this command line is given below.
 ## Notes
 
 * FreeDOS is a registered trademark of Jim Hall.
-* Linux is a registered trademark of Linus Tovarlds.
+* Linux is a registered trademark of Linus Torvalds.
 * MS-DOS is a registered trademark of Microsoft Corporation.
