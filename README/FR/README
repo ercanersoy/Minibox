@@ -1,0 +1,141 @@
+- Minibox -
+
+Petites commandes Linux pour les systämes Ö ressources limitÇes
+
+Droit d'auteur (C) 2017-2021 Ercan Ersoy
+
+Ce programme est couvert par les licences publiques gÇnÇrales GNU version 2 et
+version 3.
+
+
+-- Remerciements --
+
+Merci Ö Berki YenigÅn pour la traduction en franáais.
+
+
+-- Compilation --
+
+Le programme Minibox doit àtre compilÇ avec GCC.
+
+
+--- MS-DOS, FreeDOS et similaires ---
+
+Vous devez utiliser DJGPP.
+
+Vous devez compiler avec la ligne de commande indiquÇe ci-dessous :
+
+    make dos
+
+
+-- Utilisation --
+
+    MINIBOX Commande [Arguments]
+    MINIBOX --help|--version
+
+
+-- Commandes --
+
+  * beep
+  * cat
+  * cd
+  * clear
+  * cp
+  * date
+  * echo
+  * help
+  * ls
+  * mkdir
+  * mv
+  * pwd
+  * rm
+  * rmdir
+  * sh
+  * time
+
+
+-- Journal des modifications --
+
+
+--- 0.7 (12/01/2021) ---
+
+* Mise Ö jour du fichier "README.md" et des fichiers "README" avec les journaux
+  de modifications des versions prÇcÇdentes.
+* Ajout d'une nouvelle traduction en franáais.
+* Mise Ö jour des fichiers d'en-tàte des langues.
+* Mise Ö jour des informations de version.
+
+
+--- 0.6 (09/05/2020) ---
+
+* Mise Ö jour du fichier "README.md" et des fichiers "README" avec les journaux
+  de modifications des versions prÇcÇdentes.
+* Effacement du rÇpertoire "binaries".
+* Mise Ö jour du fichier "Makefile".
+* Mise Ö jour du fichier ".gitignore".
+* Conversion des fichiers oubliÇs avec des fins de lignes LF en fins de ligne
+  CR/LF.
+* Mise Ö jour des fichiers d'en-tàte de langue.
+* Mise Ö jour des informations de version.
+
+
+--- 0.5 (03/06/2019) ---
+
+* Passage Ö l'utilisation des deux licences GNU GPL version 2.0 et GNU GPL
+  version 3.0.
+* Mise Ö jour des chaånes de langue dans les fichiers d'en-tàte.
+* Renommage des macros de chaånes.
+* Mise Ö jour des fichiers d'en-tàte et de code source dans un but de
+  standardisation.
+* Correction de la configuration par dÇfaut erronÇe des langues dans le fichier
+  "config.h".
+* Ajout du modäle ".o" au fichier ".gitignore".
+* Mise Ö jour de l'arborescence des rÇpertoires pour les fichiers binaires.
+* Modification des rÇglages de compilation en optimisation -01.
+* Mise Ö jour du fichier exÇcutable.
+* Mise Ö jour des fichiers "README" et "README.md".
+* Mise Ö jour des informations de version.
+* Mise Ö jour du journal des modifications.
+
+
+--- 0.4 (30/04/2018) ---
+
+* Modification de la licence de ce programme en GNU GPL version 3.0.
+* Corrections de coquilles.
+* Mise Ö jour de la structure d'arborescence.
+* Ajout des fichiers de localisation.
+* Ajout de la configuration de la langue au fichier "config.h".
+* Ajout d'une traduction en turc.
+* Mise Ö jour des informations de version.
+* Ajout d'un journal des modifications.
+
+
+--- 0.3 (29/07/2017) ---
+
+* Correction de bugs dans les commandes pwd, rm, sh et time.
+* Effacement de code superflu dans la commande date.
+* Ajout d'un fichier exÇcutable pour ce programme.
+* Mise Ö jour des informations de version.
+
+
+--- 0.2 (16/06/2017) ---
+
+* Correction d'un probläme qui empàchait l'effacement avec la commande rm.
+* Correction de prÇprocesseurs #ifdef et d'un bug de version dans le module
+  principal.
+* Petites modifications dans le code source de Minibox.
+* Effacement d'un fichier exÇcutable.
+* Ajout de la commande help.
+* AmÇlioration du fichier Makefile.
+* Mise Ö jour des informations de version.
+
+
+--- 0.1 (25/04/2017) ---
+
+* Premiäre version
+
+
+-- Notes --
+
+* FreeDOS est une marque dÇposÇe de Jim Hall.
+* Linux est une marque dÇposÇe de Linus Torvalds.
+* MS-DOS est une marque dÇposÇe de l'entreprise Microsoft.

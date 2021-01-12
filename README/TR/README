@@ -2,14 +2,16 @@
 
 Kstl kaynaklar i‡in k‡k Linux komutlar
 
-Telif Hakk (C) 2017-2020 Ercan Ersoy
+Telif Hakk (C) 2017-2021 Ercan Ersoy
 
 Bu yazlm, GNU Genel Kamu Lisans 2. srm ve
 GNU Genel Kamu Lisans 3. srm altnda lisanslanmŸtr.
 
+
 -- TeŸekkr --
 
-S”zcelerin Franszca ‡evirileri i‡in Berki Yenign'e teŸekkrler.
+Franszca ‡eviriler i‡in Berki Yenign'e teŸekkrler.
+
 
 -- Derleme --
 
@@ -54,10 +56,19 @@ AŸa§da verilen komut satryla derlemeniz gerekir.
 -- De§iŸim Gnl§ --
 
 
---- 0.6 (05-09-2020) ---
+--- 0.7 (12.01.2021) ---
 
 * "README.md" dosyas ve "README" dosyalar, ”nceki srmlerin de§iŸim
-  gnlkleri dahil gncellendi.
+  gnlkleriyle birlikte gncellendi.
+* Yeni Franszca ‡eviriler eklendi.
+* Dil baŸlk dosyalar gncellendi.
+* Srm bilgisi gncellendi.
+
+
+--- 0.6 (09.05.2020) ---
+
+* "README.md" dosyas ve "README" dosyalar, ”nceki srmlerin de§iŸim
+  gnlkleriyle birlikte gncellendi.
 * "binaries" dizini silindi.
 * "Makefile" dosyas gncellendi.
 * ".gitignore" dosyas gncellendi.
@@ -67,7 +78,7 @@ AŸa§da verilen komut satryla derlemeniz gerekir.
 * Srm bilgisi gncellendi.
 
 
---- 0.5 (06-03-2019) ---
+--- 0.5 (03.06.2019) ---
 
 * GNU GPL srm 2.0 ve GNU GPL srm 3.0 olarak ‡ift lisanslamaya ge‡ilmiŸtir.
 * BaŸlk dosyalarnda dil s”zceleri gncellendi.
@@ -83,7 +94,7 @@ AŸa§da verilen komut satryla derlemeniz gerekir.
 * De§iŸim gnl§ gncellendi.
 
 
---- 0.4 (04-30-2018) ---
+--- 0.4 (30.04.2018) ---
 
 * Bu yazlmn lisans to GNU GPL srm 3.0 olarak de§iŸtirildi.
 * Yazm hatalar dzeltildi.
@@ -95,31 +106,33 @@ AŸa§da verilen komut satryla derlemeniz gerekir.
 * De§iŸim gnl§ eklendi.
 
 
---- 0.3 (07-29-2017) ---
+--- 0.3 (29.07.2017) ---
 
-* pwd, rm, sh and time komutlarndaki hatalar gncellendi.
+* pwd, rm, sh ve time komutlarndaki hatalar gncellendi.
 * date komutunda fazla kodlar ‡kartld.
 * €alŸtrlabilir dosya eklendi.
 * Srm bilgisi gncellendi.
 
 
---- 0.2 (06-16-2017) ---
+--- 0.2 (16.06.2017) ---
 
 * rm komutunda dzgn silmeme hatas dzeltildi.
-* Ana bileŸende yanlŸ #ifdef ”n iŸlemci komutu ve yanlŸ srm hatas dzeltildi.
+* Ana bileŸende yanlŸ #ifdef ”n iŸlemci komutu ve yanlŸ srm hatas
+  dzeltildi.
 * Minibox kodlarnda ufak de§iŸiklikler yapld.
 * €alŸtrlabilir dosya silindi.
 * help komutu eklendi.
 * Makefile dosyas geniŸletildi.
 * Srm bilgisi gncellendi.
 
---- 0.1 (04-25-2017) ---
+
+--- 0.1 (25.04.2017) ---
 
 * ˜lk srm
 
 
--- Notes --
+-- Notlar --
 
 * FreeDOS, Jim Hall'n kaytl ticari markasdr.
-* Linux, Linus Tovarlds'n kaytl ticari markasdr.
+* Linux, Linus Torvalds'n kaytl ticari markasdr.
 * MS-DOS, Microsoft Firmas'nn kaytl ticari markasdr.

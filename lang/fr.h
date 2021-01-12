@@ -57,7 +57,7 @@
    #define STRING_MINIBOX_TIME_DESCRIPTION "MINIBOX time - Mesurer la dur‚e d\'ex‚cution d\'une commande en secondes."
    #define STRING_MINIBOX_TIME_USAGE "  MINIBOX time <Commande> [Argument]"
    #define STRING_MINIBOX_USAGE "  MINIBOX <Commande> [Arguments]"
-   #define STRING_MINIBOX_VERSION "Minibox version : 0.6"
+   #define STRING_MINIBOX_VERSION "Minibox version : 0.7"
    #define STRING_NO_ENOUGH_ARGUMENTS "Pas assez d\'arguments."
    #define STRING_NOTE "Note :"
    #define STRING_OPTION "Option :"

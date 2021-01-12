@@ -2,25 +2,27 @@
 
 Small Linux commands for resource limited systems
 
-Copyright (C) 2017-2020 Ercan Ersoy
+Copyright (C) 2017-2021 Ercan Ersoy
 
 This software is licensed under GNU General Public License version 2 and
 GNU General Public License version 3.
 
+
 -- Thanks --
 
-Thanks to Berki Yenig√ºn for French translations of strings.
+Thanks to Berki YenigÅn for French translations.
+
 
 -- Compiling --
 
-The program of Minibox must be compiled with GCC.
+The Minibox program must be compiled with GCC.
 
 
 --- MS-DOS, FreeDOS etc. ---
 
 You must use DJGPP.
 
-You should be compiled the command line is given below.
+You should compile with the command line given below.
 
     make dos
 
@@ -54,6 +56,15 @@ You should be compiled the command line is given below.
 -- Changelog --
 
 
+--- 0.7 (01-12-2021) ---
+
+* Updated "README.md" file and "README" files including changelog of
+  previous versions.
+* Added French translations.
+* Updated language header files.
+* Updated version information.
+
+
 --- 0.6 (05-09-2020) ---
 
 * Updated "README.md" file and "README" files including changelog of previous
@@ -63,19 +74,19 @@ You should be compiled the command line is given below.
 * Updated ".gitignore" file.
 * Converted forgotten files with LF line ending to CR/LF line ending.
 * Updated language header files.
-* Updated verison information.
+* Updated version information.
 
 
 --- 0.5 (06-03-2019) ---
 
-* Switched to dual licencing as GNU GPL version 2.0 and GNU GPL version 3.0.
+* Switched to dual licensing as GNU GPL version 2.0 and GNU GPL version 3.0.
 * Updated language strings at header files.
 * Renamed macro name of strings.
 * Updated header and source files for standardization.
 * Fixed wrong default language configuration at "config.h" file.
 * Added ".o" pattern to ".gitignore" file.
 * Changed directory tree for binaries.
-* Changed build settings to -01 optimisation.
+* Changed build settings to -01 optimization.
 * Updated executable file of this software.
 * Updated "README" files and "README.md" file.
 * Updated version information.
@@ -107,11 +118,12 @@ You should be compiled the command line is given below.
 
 * Fixed deleting not properly bug on rm command.
 * Fixed wrong #ifdef preprocessors and fix version bug in main module.
-* Changed code as minor of Minibox.
+* Minor code modifications in Minibox.
 * Removed executable file of this software.
 * Added help command.
 * Enhanced Makefile file.
 * Updated version information.
+
 
 --- 0.1 (04-25-2017) ---
 
@@ -121,5 +133,5 @@ You should be compiled the command line is given below.
 -- Notes --
 
 * FreeDOS is a registered trademark of Jim Hall.
-* Linux is a registered trademark of Linus Tovarlds.
+* Linux is a registered trademark of Linus Torvalds.
 * MS-DOS is a registered trademark of Microsoft Corporation.

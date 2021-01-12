@@ -2,7 +2,7 @@
 
 Small Linux commands for resource limited systems
 
-Copyright (C) 2017-2020 Ercan Ersoy
+Copyright (C) 2017-2021 Ercan Ersoy
 
 This software is licensed under GNU General Public License version 2 and GNU General Public License version 3.
 
