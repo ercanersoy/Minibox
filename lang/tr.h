@@ -3,7 +3,7 @@
  *  Written by Ercan Ersoy.
  */
 
-#define TR 2
+#define TR 3
 
 #if LANGUAGE == TR
    #define STRING_CANNOT_COPY "%s kopyalanamçyor.\r\n"

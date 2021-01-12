@@ -5,7 +5,7 @@
 
 // Language Configure
 
-#define LANGUAGE EN  // EN or TR
+#define LANGUAGE EN  // EN or FR or TR
 
 // Commands' Configures
 

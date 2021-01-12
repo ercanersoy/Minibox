@@ -18,6 +18,7 @@
 #include <time.h>
 #include "config.h"
 #include "lang\en.h"
+#include "lang\fr.h"
 #include "lang\tr.h"
 
 // Command functions prototypes

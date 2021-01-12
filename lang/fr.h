@@ -3,7 +3,7 @@
  *  Written by Berki YenigÅn.
  */
 
-#define FR 1
+#define FR 2
 
 #if LANGUAGE == FR
    #define STRING_CANNOT_COPY "impossible de copier %s.\r\n"
