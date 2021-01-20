@@ -8,7 +8,7 @@ This software is licensed under GNU General Public License version 2 and GNU Gen
 
 ## Thanks
 
-Thanks to Berki Yenigün for French translations of strings.
+Thanks to Berki Yenigün for French translations.
 
 ## Compile
 
